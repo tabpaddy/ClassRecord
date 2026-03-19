@@ -59,7 +59,7 @@ export function Navbar() {
 
     const observerOptions = {
       root: null,
-      rootMargin: "-40% 0px -40% 0px", // Detects when section is in the middle 20% of screen
+      rootMargin: "-40% 0px -40% 0px",
       threshold: 0,
     };
 
@@ -84,7 +84,6 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      // FIXED: Only use 'fixed' on mobile when scrolling. Large screens stay 'absolute'.
       className={`${
         scroll ? "fixed md:absolute" : "absolute"
       } top-0 md:top-10 left-0 right-0 z-50 transition-all duration-300`}>
@@ -92,7 +91,7 @@ export function Navbar() {
         className={`mx-auto px-4 py-2 md:py-0 sm:px-6 lg:px-8 transition-all duration-500
       ${
         scroll
-          ? "bg-[#021F59E5]/90 backdrop-blur-2xl rounded-b-xl md:bg-white md:rounded-2xl" // Mobile: Blue/Scrolled | Desktop: Always White
+          ? "bg-[#021F59E5]/90 backdrop-blur-2xl rounded-b-xl md:bg-white md:rounded-2xl" 
           : "bg-transparent md:bg-white md:rounded-2xl"
       } 
       md:shadow-lg md:max-w-182.5 lg:max-w-4xl 2xl:max-w-6xl md:border md:border-[#7186FF]/20 md:backdrop-blur-sm`}>

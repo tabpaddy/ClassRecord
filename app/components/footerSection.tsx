@@ -6,7 +6,7 @@ const footerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Faster stagger for better feel
+      staggerChildren: 0.2,
     },
   },
 };
@@ -21,17 +21,15 @@ const itemVariants: Variants = {
 };
 
 export default function FooterSection() {
-  // Dynamically get the current year
   const currentYear = new Date().getFullYear();
 
   return (
     <motion.footer
       className="w-full bg-white pt-16 pb-6 md:pb-0 px-4 overflow-hidden relative flex flex-col items-center justify-center"
       initial="hidden"
-      whileInView="visible" // Animates when it scrolls into view
+      whileInView="visible"
       viewport={{ once: true }}
       variants={footerVariants}>
-      {/* Logo and Tagline */}
       <motion.div
         className="flex flex-col items-center gap-4 mt-20 mb-1 font-host-grotesk"
         variants={itemVariants}>
@@ -49,14 +47,12 @@ export default function FooterSection() {
         variants={itemVariants}
       />
 
-      {/* Copyright with Dynamic Date */}
       <motion.div className="font-host-grotesk mb-10" variants={itemVariants}>
         <p className="text-slate-500 text-sm text-center">
           © {currentYear} ClassRecord. All rights reserved.
         </p>
       </motion.div>
 
-      {/* Giant Background Text */}
       <motion.div
         className="flex justify-center items-center w-full md:overflow-hidden"
         variants={itemVariants}>

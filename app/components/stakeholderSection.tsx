@@ -50,7 +50,6 @@ export default function StakeholderSection() {
 
   return (
     <section id="roles" className="min-h-screen py-16 px-4 my-6 bg-white">
-      {/* Header Section */}
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -58,9 +57,9 @@ export default function StakeholderSection() {
           viewport={{ once: true }}
           className="flex justify-center mb-8">
           <div className="bg-linear-to-b from-[#021F59] to-[#7186FF] p-0.5 rounded-md shadow-sm">
-            <div className="bg-white rounded-md px-6 py-2 flex items-center gap-2 text-[#7186FF]">
+            <div className="bg-white rounded-md px-3 py-1.5 sm:px-6 sm:py-2 flex items-center gap-2 text-[#7186FF]">
               <Cog className="w-5 h-5" />
-              <h3 className="font-host-grotesk text-xl">
+              <h3 className="font-host-grotesk text-lg sm:text-xl">
                 Built for Every Stakeholder.
               </h3>
             </div>
@@ -73,7 +72,7 @@ export default function StakeholderSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-6xl font-fredoka text-[#0F172A] mb-6 leading-tight">
+          <h2 className="font-bold text-3xl sm:text-4xl md:text-6xl font-fredoka text-[#0F172A] mb-6 leading-tight">
             One platform. Every role. <br /> No{" "}
             <span className="text-[#7186FF]">confusion.</span>
           </h2>
@@ -83,7 +82,6 @@ export default function StakeholderSection() {
           </p>
         </motion.div>
 
-        {/* FIXED GRID: Using staggered container */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

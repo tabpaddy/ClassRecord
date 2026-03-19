@@ -30,7 +30,6 @@ export default function HowSection() {
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}>
       <div className="sm:flex mx-auto sm:justify-center gap-2 md:gap-5 lg:gap-10 max-w-xl md:max-w-2xl lg:max-w-4xl mt-28 mb-10">
-        {/* LEFT SIDE - HEADER CONTENT */}
         <motion.div
           variants={itemVariants}
           id="How-It-Works"
@@ -58,7 +57,6 @@ export default function HowSection() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE - STEPS */}
         <div className="flex-1">
           {[
             {
